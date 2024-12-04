@@ -31,8 +31,8 @@ import CardProject from "./CardProject.astro";
 
   <Tag
     tagName="JavaScript"
-    color="white"
-    background="black"
+    color="black"
+    background="white"
     src="/javascript.svg"
   />
 
@@ -113,8 +113,8 @@ import CardProject from "./CardProject.astro";
   >
     <Tag
       tagName="JavaScript"
-      color="white"
-      background="black"
+      color="black"
+      background="white"
       src="/javascript.svg"
     />
     <Tag
@@ -219,6 +219,25 @@ import CardProject from "./CardProject.astro";
 
   </section>
 
+  <section class="knowledge">
+      <div class="knowledge__container">
+
+        <img src="/tecnologias/CSS.svg" alt="logo css"/>
+        <img src="/tecnologias/HTML.svg" alt="logo html"/>
+        <img src="/tecnologias/JS.svg" alt="logo js"/>
+        <img src="/tecnologias/TS.svg" alt="logo ts"/>
+        <img src="/tecnologias/REACT.svg" alt="logo react"/>
+        <img src="/tecnologias/ANGULAR.svg" alt="logo angular"/>
+
+        <img src="/tecnologias/NEXTJS2.svg" alt="logo css"/>
+        <img src="/tecnologias/TAILWINDCSS.svg" alt="logo css"/>
+        <img src="/tecnologias/JAVA.svg" alt="logo css"/>
+        <img src="/tecnologias/SPRING%20BOOT.svg" alt="logo css"/>
+        <img src="/tecnologias/MYSQL.svg" alt="logo css"/>
+
+      </div>
+  </section>
+
 
 
   <img id="background" src={background.src} alt="" fetchpriority="high" />
@@ -274,6 +293,20 @@ import CardProject from "./CardProject.astro";
     display: flex;
     gap: 20px;
     padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  .knowledge{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      background-color: bisque;
+  }
+
+  .knowledge__container{
+      display: flex;
+      width: 900px;
       flex-wrap: wrap;
   }
 
