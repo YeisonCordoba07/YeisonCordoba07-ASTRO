@@ -1,115 +1,131 @@
 ---
+import Button from "./Button.astro";
+---
+<section>
 
-import Button from "./Button.astro";---
-<section class="">
+    <div class="info">
 
-  <div class="info">
-      <div class="info__title-container">
-        <h1 class="info__title">Yeison Cordoba</h1>
-        <span class="info__subtitle">Desarrollador web</span>
+        <div class="info__background">
+            <div class="info__title-container">
+                <h1 class="info__title">Yeison Cordoba</h1>
+                <span class="info__subtitle">Desarrollador web</span>
+            </div>
 
-      </div>
-      <p class="info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <p class="info__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
 
-      <Button>
-          Correo
-      </Button>
+            <Button>
+                Correo
+            </Button>
+        </div>
 
-  </div>
+    </div>
 
-  <div class="contenedor-imagen">
-      <div >
-        <img src="/Yo.png">
-
-      </div>
-  </div>
+    <div class="container-image">
+        <div>
+            <img src="/Yo.png" alt="foto de perfil">
+        </div>
+    </div>
 
 </section>
 
 <style>
-  .info{
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    width: 500px;
-    border-radius: 10px;
-    gap: 20px;
 
-    background: linear-gradient(
-      45deg,
-      rgba(64, 156, 255, 0.2),
-      rgba(218, 143, 255, 0.3),
-      rgba(255, 105, 97, 0.2),
-      rgba(255, 179, 64, 0.2),
-      rgba(255, 212, 38, 0.2)
-    );
-  }
+    .info {
+        background-color: #fff1f1;
+        width: 400px;
+        height: 340px;
+        border-radius: 10px;
+    }
 
-  .info__title-container{
-    display: flex;
-    flex-direction: column;
-    gap:0;
+    .info__background {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        gap: 20px;
 
-  }
+        background: linear-gradient(
+                75deg,
+                rgba(64, 156, 255, 0.3),
+                rgba(218, 143, 255, 0.3),
+                rgba(255, 105, 97, 0.3),
+                rgba(255, 179, 64, 0.3),
+                rgba(255, 212, 38, 0.3)
+        );
+    }
 
-  .info__title{
-    font-weight: 900;
-    font-size: 45px;
+    .info__title-container {
+        display: flex;
+        flex-direction: column;
+    }
 
-    font-family: fredoka, nunito, serif;
-    margin: 0;
-  }
+    .info__title {
+        font-weight: 900;
+        font-size: 45px;
 
-  .info__subtitle{
-    font-family: fredoka, nunito, serif;
-    font-size: 30px;
-    font-weight: 500;
-  }
+        font-family: fredoka, nunito, serif;
+        margin: 0;
+    }
 
-  .info__text{
-    font-family: nunito, serif;
-  }
+    .info__subtitle {
+        font-family: fredoka, nunito, serif;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .info__text {
+        font-family: nunito, serif;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
 
 
-  .contenedor-imagen{
-      display: flex;
-      width: 340px;
-      height: 320px;
-      border-radius: 10px;
 
-      background-color: white;
-      overflow: hidden;
-  }
-  .contenedor-imagen > div{
-      display: flex;
-      width: 340px;
-      height: 320px;
-      border-radius: 10px;
+    .container-image {
+        display: flex;
+        width: 360px;
+        height: 340px;
+        border-radius: 10px;
+        background-color: #fff1f1;
+        overflow: hidden;
+    }
 
-      background: linear-gradient(
-              75deg,
-              rgba(64, 156, 255, 0.3),
-              rgba(218, 143, 255, 0.3),
-              rgba(255, 105, 97, 0.3),
-              rgba(255, 179, 64, 0.3),
-              rgba(255, 212, 38, 0.3)
-      );
-      overflow: hidden;
-  }
+    .container-image > div {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
 
-  .contenedor-imagen > img{
-      width: 100%;
-      height: 100%;
+        background: linear-gradient(
+                75deg,
+                rgba(64, 156, 255, 0.3),
+                rgba(218, 143, 255, 0.3),
+                rgba(255, 105, 97, 0.3),
+                rgba(255, 179, 64, 0.3),
+                rgba(255, 212, 38, 0.3)
+        );
+        overflow: hidden;
+    }
 
-  }
+    .container-image > img {
+        width: 100%;
+        height: 100%;
 
-  section{
-      display: flex;
-      gap: 20px;
-      padding: 20px;
-      justify-content: center;
-      width: 100%;
-  }
+    }
+
+    section {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+        width: 100%;
+    }
 
 </style>
