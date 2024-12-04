@@ -2,6 +2,9 @@
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
 import Tag from "./Tag.astro";
+
+import Button from "./Button.astro";
+import CardProject from "./CardProject.astro";
 ---
 
 <div id="container">
@@ -88,13 +91,22 @@ import Tag from "./Tag.astro";
     background="white"
     src="/spring.svg"
   />
-  
+
   <Tag
     tagName="Figma"
     color="black"
     background="white"
     src="/figma.svg"
   />
+
+  <CardProject
+      title="Master Class"
+    description="Pagina creada para mejorar mis habilidades en maquetando paginas con HTML y CSS. En este punto no sabia como se agregaban iconos o interaciones a las paginas."
+      src="/PaginaMasterClass.jpg"
+      github="#"
+      result="#"
+
+  ></CardProject>
 
 
 
@@ -143,7 +155,14 @@ import Tag from "./Tag.astro";
   </a>
 </div>
 
-<style>
+<style is:global>
+  @import "../styles/global.css";
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   #background {
     position: fixed;
     top: 0;

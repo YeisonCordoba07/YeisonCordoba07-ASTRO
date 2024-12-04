@@ -1,0 +1,151 @@
+---
+import Button from "./Button.astro";
+import Tag from "./Tag.astro";
+const {title, description, src, github, result} = Astro.props;
+---
+
+<article class="card-project">
+
+    <h3 class="card-project__title">{title ? title : "Titulo proyecto"}</h3>
+
+    <div class="card-project__image-container">
+        <img
+                class="card-project__image"
+                src={src}
+                alt="Imagen del proyecto"
+        />
+    </div>
+
+
+    <p class="card-project__description">{description ? description : "Descripcion proyecto"}</p>
+
+
+    <div class="card-project__tag">
+        <Tag
+                tagName="NextJS"
+                color="white"
+                background="black"
+                src="/nextjs.svg"
+        />
+
+        <Tag
+                tagName="Angular"
+                color="black"
+                background="white"
+                src="/angular18.svg"
+        />
+
+        <Tag
+                tagName="TypeScript"
+                color="black"
+                background="white"
+                src="/typescript.svg"
+        />
+
+        <Tag
+                tagName="JavaScript"
+                color="white"
+                background="black"
+                src="/javascript.svg"
+        />
+
+        <Tag
+                tagName="HTML"
+                color="white"
+                background="black"
+                src="/html5.svg"
+        />
+
+        <Tag
+                tagName="CSS"
+                color="white"
+                background="black"
+                src="/css.svg"
+        />
+
+    </div>
+
+
+    <div class="card-project__button-container">
+
+        <a class="card-project__link" href={github}>
+            <Button text="Ver resultado"/>
+        </a>
+
+        <a class="card-project__link" href={result}>
+            <Button text="Codigo" src="/github-black.svg"/>
+        </a>
+
+    </div>
+
+
+</article>
+
+
+<style>
+    .card-project {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 20px;
+        width: 400px;
+        justify-content: center;
+        gap: 10px;
+        background-color: #f6ebff;
+    }
+
+    .card-project__title {
+        font-weight: bold;
+        font-size: 42px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .card-project__image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+        background: linear-gradient(
+                45deg,
+                rgba(64, 156, 255, 0.3),
+                rgba(218, 143, 255, 0.4),
+                rgba(255, 105, 97, 0.2),
+                rgba(255, 179, 64, 0.5),
+                rgba(255, 212, 38, 0.3)
+        );
+
+    }
+
+    .card-project__image {
+        box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.5);
+        width: 90%;
+        border-radius: 5px;
+    }
+
+    .card-project__description {
+
+    }
+
+    .card-project__tag {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+        margin: 15px 0;
+    }
+
+    .card-project__link {
+        text-decoration: none;
+    }
+
+    .card-project__button-container {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+</style>
+
