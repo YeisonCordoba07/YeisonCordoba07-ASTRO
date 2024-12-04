@@ -86,13 +86,21 @@ const {title, description, src, github, result} = Astro.props;
     .card-project {
         display: flex;
         flex-direction: column;
-        border: 1px solid black;
+
         border-radius: 15px;
         padding: 20px;
         width: 400px;
         justify-content: center;
         gap: 10px;
-        background-color: #f6ebff;
+
+        box-shadow: 0px 5px 20px 0 rgba(218, 143, 255, 0.2);
+        margin-left: 50px;
+        background: linear-gradient(
+            45deg,
+            rgba(17, 112, 255, 0.2),
+            rgba(3, 230, 255, 0.05),
+            rgba(88, 4, 255, 0.2)
+        );
     }
 
     .card-project__title {
@@ -145,6 +153,7 @@ const {title, description, src, github, result} = Astro.props;
         display: flex;
         gap: 15px;
         flex-wrap: wrap;
+        margin-top: 30px
     }
 
 </style>
