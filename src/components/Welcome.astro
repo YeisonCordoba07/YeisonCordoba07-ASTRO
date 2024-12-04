@@ -99,14 +99,125 @@ import CardProject from "./CardProject.astro";
     src="/figma.svg"
   />
 
+
+
+
+<section class="projects">
+
+  <CardProject
+    title="Mercado Libre"
+    description="Pagina creada para mejorar mis habilidades en maquetando paginas con HTML y CSS. En este punto no sabia como se agregaban iconos o interaciones a las paginas."
+    src="/PaginaMercadoLibre.jpg"
+    github="#"
+    result="#"
+  >
+    <Tag
+      tagName="JavaScript"
+      color="white"
+      background="black"
+      src="/javascript.svg"
+    />
+    <Tag
+      tagName="TypeScript"
+      color="black"
+      background="white"
+      src="/typescript.svg"
+    />
+    <Tag
+      tagName="Angular"
+      color="black"
+      background="white"
+      src="/angular18.svg"
+    />
+
+    <Tag
+      tagName="MySQL"
+      color="black"
+      background="white"
+      src="/mysql.svg"
+    />
+
+    <Tag
+      tagName="Spring"
+      color="black"
+      background="white"
+      src="/spring.svg"
+    />
+
+  </CardProject>
+
   <CardProject
     title="Master Class"
     description="Pagina creada para mejorar mis habilidades en maquetando paginas con HTML y CSS. En este punto no sabia como se agregaban iconos o interaciones a las paginas."
     src="/PaginaMasterClass.jpg"
     github="#"
     result="#"
+  >
+    <Tag
+      tagName="HTML"
+      color="white"
+      background="black"
+      src="/html5.svg"
+    />
 
-  ></CardProject>
+    <Tag
+      tagName="CSS"
+      color="white"
+      background="black"
+      src="/css.svg"
+    />
+
+  </CardProject>
+
+
+  <CardProject
+    title="Correos España"
+    description="Pagina creada para mejorar mis habilidades en maquetando paginas con HTML y CSS. En este punto no sabia como se agregaban iconos o interaciones a las paginas."
+    src="/PaginaCorreos.jpg"
+    github="#"
+    result="#"
+  >
+    <Tag
+      tagName="HTML"
+      color="white"
+      background="black"
+      src="/html5.svg"
+    />
+
+    <Tag
+      tagName="CSS"
+      color="white"
+      background="black"
+      src="/css.svg"
+    />
+
+  </CardProject>
+
+
+  <CardProject
+    title="Emason"
+    description="Aplicación creada para el bootcamp de pragma. Permite crear productos y asignarlos a categorias y marcas, las cuales también se pueden crear."
+    src="/PaginaMercadoLibre.jpg"
+    github="#"
+    result="#"
+  >
+    <Tag
+      tagName="HTML"
+      color="white"
+      background="black"
+      src="/html5.svg"
+    />
+
+    <Tag
+      tagName="CSS"
+      color="white"
+      background="black"
+      src="/css.svg"
+    />
+
+  </CardProject>
+
+  </section>
 
 
 
@@ -157,6 +268,15 @@ import CardProject from "./CardProject.astro";
 
 <style is:global>
   @import "../styles/global.css";
+
+
+  .projects{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+      flex-wrap: wrap;
+  }
+
 
   *{
     margin: 0;

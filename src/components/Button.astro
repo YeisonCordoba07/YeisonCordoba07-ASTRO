@@ -7,7 +7,7 @@ const { text, src, color, background } = Astro.props;
         
     {src ? <img class="button__icon" src={src} alt=""/> : null}
     <span class="button__text" style=`color: ${color}`>
-        {text ? text: "ver mas"}
+        <slot/>
     </span>
         
 </button>
@@ -22,7 +22,7 @@ const { text, src, color, background } = Astro.props;
         align-items: center;
         gap: 15px;
 
-        width: 220px;
+        width: fit-content;
         height: 50px;
 
         transition: transform 0.2s;
