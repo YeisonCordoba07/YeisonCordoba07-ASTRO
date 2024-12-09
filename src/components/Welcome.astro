@@ -2,10 +2,12 @@
 import Tag from "./Tag.astro";
 import CardProject from "./CardProject.astro";
 import Info from "./Info.astro";
+import TitleSection from "./TitleSection.astro";
 ---
 <Info></Info>
 
 <section class="knowledge">
+    <TitleSection title="Tecnologias"/>
     <div class="knowledge__container">
 
         <img src="/tecnologias/CSS.svg" alt="logo css"/>
@@ -248,7 +250,6 @@ import Info from "./Info.astro";
     .projects {
         display: flex;
         flex-direction: column;
-
         gap: 20px;
         padding: 20px;
         flex-wrap: wrap;
@@ -263,13 +264,12 @@ import Info from "./Info.astro";
         background: linear-gradient(45deg, rgb(255, 151, 0), rgb(255, 190, 92), rgb(255, 119, 0));
         /* -webkit-background-clip: text;
          -webkit-text-fill-color: transparent;*/
-
     }
 
     .projects__container {
-        display: grid;
-        width: 1200px;
+        width: 100%;
         margin: auto;
+        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         background-color: #ffe4e4;
@@ -279,15 +279,46 @@ import Info from "./Info.astro";
 
         gap: 20px;
         padding: 20px;
-        flex-wrap: wrap;
+    }
+
+
+    @media (max-width: 767px){
+        /* Estilos específicos para móviles pequeños */
+        .projects__container {
+            background-color: #ffdcdc;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        /* Estilos para tablets en modo vertical */
+        .projects__container {
+            background-color: #e3ffe3;
+            grid-template-columns: 49% 49%;
+            grid-template-rows: auto;
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        /* Estilos para pantallas medianas */
+        .projects__container {
+            background-color: #fff3e0;
+            min-width: 1024px;
+            max-width: 1200px;
+        }
     }
 
     .knowledge {
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         background-color: bisque;
+        gap: 20px;
     }
 
     .knowledge__container {
