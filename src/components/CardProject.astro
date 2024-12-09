@@ -1,6 +1,5 @@
 ---
 import Button from "./Button.astro";
-import Tag from "./Tag.astro";
 const {title, description, src, github, result} = Astro.props;
 ---
 
@@ -28,15 +27,33 @@ const {title, description, src, github, result} = Astro.props;
 
     <div class="card-project__button-container">
 
-        {result ? <a class="card-project__link" href={result}>
-            <Button>Ver</Button>
-        </a> : null}
+      {result ? <a class="card-project__link" href={result}>
+          <Button>
+              <span class="card-project__arrow">
+                Ver
 
-        {github ? <a class="card-project__link" href={github}>
-            <Button src="/github-black.svg">Codigo</Button>
-        </a> : null}
+                  <svg
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          height="23"
+                          width="23"
+                          xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+
+                </span>
+          </Button>
+      </a> : null}
+
+      {github ? <a class="card-project__link" href={github}>
+          <Button src="/github-black.svg">Codigo</Button>
+      </a> : null}
 
     </div>
+    <div class="card-project__decoration"></div>
 
 
 </article>
@@ -49,17 +66,21 @@ const {title, description, src, github, result} = Astro.props;
 
         border-radius: 15px;
         padding: 20px;
-        width: 400px;
+        //width: 400px;
         justify-content: center;
         gap: 10px;
 
-        box-shadow: 0px 5px 20px 0 rgba(218, 143, 255, 0.2);
-        background: linear-gradient(
-                45deg,
-                rgba(17, 112, 255, 0.2),
-                rgba(3, 230, 255, 0.05),
-                rgba(88, 4, 255, 0.2)
-        );
+        //box-shadow: 0px 5px 20px 0 rgba(218, 143, 255, 0.2);
+        box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
+        /* background: linear-gradient(
+                 45deg,
+                 rgba(17, 112, 255, 0.2),
+                 rgba(3, 230, 255, 0.05),
+                 rgba(88, 4, 255, 0.2)
+         );*/
+
+        overflow: hidden;
+        position: relative;
     }
 
     .card-project__title {
@@ -95,7 +116,7 @@ const {title, description, src, github, result} = Astro.props;
     }
 
     .card-project__description {
-
+        font-family: fredoka, nunito, serif;
     }
 
     .card-project__tag {
@@ -113,8 +134,38 @@ const {title, description, src, github, result} = Astro.props;
         display: flex;
         gap: 15px;
         flex-wrap: wrap;
-        margin-top: 30px
+        //margin-top: 30px;
+        margin-top: auto;
     }
+
+
+    .card-project__decoration {
+        position: absolute;
+        background-color: rgba(255, 236, 205, 0.6);
+        top: 0;
+        right: 0;
+        left: 200px;
+        bottom: 0;
+
+        z-index: -1;
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+        transition-duration: 0.7s;
+        transition-property: transform, opacity;
+    }
+
+    .card-project:hover .card-project__decoration {
+        transform: translateX(-300px) scale(5);
+        opacity: 0.2;
+    }
+
+    .card-project__arrow {
+        color: white;
+        display: flex;
+        gap: 15px;
+        font-weight: bold;
+    }
+
 
 </style>
 
