@@ -40,6 +40,7 @@ import TitleSection from "./TitleSection.astro";
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        width: 100%;
         //background-color: indianred;
         //background-color: crimson;
         //background-color: blanchedalmond;
@@ -65,10 +66,22 @@ import TitleSection from "./TitleSection.astro";
         border-radius: 10px;
     }
 
+
     .knowledge__container {
         display: flex;
         width: 1024px;
         flex-wrap: wrap;
+    }
+
+
+
+    @media (max-width: 1023px){
+        .knowledge__background-container{
+            width: 100%;
+        }
+        .knowledge__container {
+          justify-content: center;
+        }
     }
 
 </style>
