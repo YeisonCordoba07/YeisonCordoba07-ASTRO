@@ -61,12 +61,13 @@ const {title, description, src, github, result} = Astro.props;
 
 <style>
     .card-project {
+        height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
 
         border-radius: 10px;
         padding: 20px;
-        //width: 400px;
         justify-content: center;
         gap: 10px;
 
@@ -85,10 +86,15 @@ const {title, description, src, github, result} = Astro.props;
 
     .card-project__title {
         font-weight: 900;
-        font-size: 45px;
+        font-size: 40px;
         text-align: center;
         margin-bottom: 20px;
+        width: 100%;
         font-family: fredoka, nunito, serif;
+
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+        overflow: hidden;
     }
 
     .card-project__image-container {
@@ -134,7 +140,6 @@ const {title, description, src, github, result} = Astro.props;
         display: flex;
         gap: 15px;
         flex-wrap: wrap;
-        //margin-top: 30px;
         margin-top: auto;
     }
 
@@ -144,6 +149,16 @@ const {title, description, src, github, result} = Astro.props;
         display: flex;
         gap: 15px;
         font-weight: bold;
+    }
+
+    @media (max-width: 767px) {
+        /* Estilos específicos para móviles pequeños */
+        .card-project__image-container{
+          height: 300px;
+        }
+        .card-project__image{
+            width: 80%;
+        }
     }
 
 
