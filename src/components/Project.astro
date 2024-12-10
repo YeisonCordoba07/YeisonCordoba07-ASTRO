@@ -1,10 +1,11 @@
 ---
 import CardProject from "./CardProject.astro";
 import Tag from "./Tag.astro";
+import TitleSection from "./TitleSection.astro";
 ---
 <section class="projects section-separation">
 
-    <h2 class="projects__title">PROYECTOS</h2>
+    <TitleSection title="Proyectos"/>
 
     <div class="projects__container">
 
@@ -104,15 +105,18 @@ import Tag from "./Tag.astro";
                     background="white"
                     src="/angular18.svg"
             />
-
-
+            <Tag
+                    tagName="Java"
+                    color="black"
+                    background="white"
+                    src="/java.svg"
+            />
             <Tag
                     tagName="Spring"
                     color="black"
                     background="white"
                     src="/spring.svg"
             />
-
             <Tag
                     tagName="MySQL"
                     color="black"
@@ -131,7 +135,6 @@ import Tag from "./Tag.astro";
     .projects {
         display: flex;
         flex-direction: column;
-        gap: 20px;
         padding: 20px;
         flex-wrap: wrap;
     }
@@ -153,7 +156,6 @@ import Tag from "./Tag.astro";
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        background-color: #ffe4e4;
 
         align-items: center;
         justify-items: center;
@@ -166,7 +168,6 @@ import Tag from "./Tag.astro";
     @media (max-width: 767px) {
         /* Estilos específicos para móviles pequeños */
         .projects__container {
-            background-color: #ffdcdc;
             grid-template-columns: 1fr;
             grid-template-rows: auto;
             width: 100%;
@@ -176,7 +177,6 @@ import Tag from "./Tag.astro";
     @media (min-width: 768px) and (max-width: 1023px) {
         /* Estilos para tablets en modo vertical */
         .projects__container {
-            background-color: #e3ffe3;
             grid-template-columns: 49% 49%;
             grid-template-rows: auto;
             width: 100%;
@@ -186,7 +186,6 @@ import Tag from "./Tag.astro";
     @media (min-width: 1024px) {
         /* Estilos para pantallas medianas */
         .projects__container {
-            background-color: #fff3e0;
             min-width: 1024px;
             max-width: 1200px;
         }

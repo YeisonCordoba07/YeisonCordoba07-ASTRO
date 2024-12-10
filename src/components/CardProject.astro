@@ -53,10 +53,10 @@ const {title, description, src, github, result} = Astro.props;
       </a> : null}
 
     </div>
-    <div class="card-project__decoration"></div>
-
 
 </article>
+
+
 
 
 <style>
@@ -138,26 +138,6 @@ const {title, description, src, github, result} = Astro.props;
         margin-top: auto;
     }
 
-
-    .card-project__decoration {
-        position: absolute;
-        background-color: rgba(255, 236, 205, 0.6);
-        top: 0;
-        right: 0;
-        left: 200px;
-        bottom: 0;
-
-        z-index: -1;
-        border-bottom-left-radius: 50%;
-        border-top-left-radius: 50%;
-        transition-duration: 0.7s;
-        transition-property: transform, opacity;
-    }
-
-    .card-project:hover .card-project__decoration {
-        transform: translateX(-300px) scale(5);
-        opacity: 0.2;
-    }
 
     .card-project__arrow {
         color: white;
