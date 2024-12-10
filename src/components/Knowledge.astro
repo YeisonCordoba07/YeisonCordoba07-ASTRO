@@ -5,21 +5,26 @@ import TitleSection from "./TitleSection.astro";
 <section class="knowledge section-separation">
 
     <TitleSection title="Tecnologías"/>
-    <div class="knowledge__container">
 
-        <img src="/tecnologias/CSS.svg" alt="logo css"/>
-        <img src="/tecnologias/HTML.svg" alt="logo html"/>
-        <img src="/tecnologias/JS.svg" alt="logo js"/>
-        <img src="/tecnologias/TS.svg" alt="logo ts"/>
-        <img src="/tecnologias/REACT.svg" alt="logo react"/>
-        <img src="/tecnologias/ANGULAR.svg" alt="logo angular"/>
+    <div class="knowledge__background-container">
 
-        <img src="/tecnologias/NEXTJS2.svg" alt="logo css"/>
-        <img src="/tecnologias/TAILWINDCSS.svg" alt="logo css"/>
-        <img src="/tecnologias/ASTRO%20NARANJA.svg" alt="logo css"/>
-        <img src="/tecnologias/JAVA.svg" alt="logo css"/>
-        <img src="/tecnologias/SPRING%20BOOT.svg" alt="logo css"/>
-        <img src="/tecnologias/MYSQL.svg" alt="logo css"/>
+      <div class="knowledge__container">
+
+          <img src="/tecnologias/CSS.svg" alt="logo css"/>
+          <img src="/tecnologias/HTML.svg" alt="logo html"/>
+          <img src="/tecnologias/JS.svg" alt="logo js"/>
+          <img src="/tecnologias/TS.svg" alt="logo ts"/>
+          <img src="/tecnologias/REACT.svg" alt="logo react"/>
+          <img src="/tecnologias/ANGULAR.svg" alt="logo angular"/>
+
+          <img src="/tecnologias/NEXTJS2.svg" alt="logo css"/>
+          <img src="/tecnologias/TAILWINDCSS.svg" alt="logo css"/>
+          <img src="/tecnologias/ASTRO%20NARANJA.svg" alt="logo css"/>
+          <img src="/tecnologias/JAVA.svg" alt="logo css"/>
+          <img src="/tecnologias/SPRING%20BOOT.svg" alt="logo css"/>
+          <img src="/tecnologias/MYSQL.svg" alt="logo css"/>
+
+      </div>
 
     </div>
 
@@ -35,14 +40,35 @@ import TitleSection from "./TitleSection.astro";
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        background-color: bisque;
+        //background-color: indianred;
+        //background-color: crimson;
+        //background-color: blanchedalmond;
+        //background-color: navajowhite;
+        //background-color: palegreen;
+
+        //background-color: slateblue;
+        background-color: #ffecec;
+        background-color: paleturquoise;
         gap: 20px;
         padding-bottom: 100px;
     }
 
+    .knowledge__background-container{
+        background-color: violet;
+        //background-color: #ffa6a6;
+        background-color: lightseagreen;
+
+        width: 1024px;
+        display: flex;
+        align-items: center;
+        padding: 62px;
+        border-radius: 10px;
+    }
+
     .knowledge__container {
         display: flex;
-        width: 900px;
+        width: 1024px;
         flex-wrap: wrap;
     }
+
 </style>
