@@ -1,0 +1,72 @@
+---
+
+---
+
+<div class="copy-element">
+    <span class="copy-element__title">
+        <slot/>
+
+            <a class="info__icons" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                      <!-- Documento detrás -->
+                      <rect x="4" y="7" width="14" height="16" rx="4" ry="4" fill="#ffffff" stroke="currentColor"
+                            stroke-width="2"/>
+                      <!-- Documento frente -->
+                      <rect x="7" y="4" width="14" height="16" rx="3" ry="3" fill="#ffffff" stroke="currentColor"
+                            stroke-width="2"/>
+                  </svg>
+
+              </a>
+    </span>
+
+</div>
+
+<style>
+    .copy-element {
+
+
+    }
+
+    .copy-element__title{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid black;
+        background-color: rgb(13, 18, 28);
+        color: white;
+        padding: 10px 60px 10px 20px;
+        border-radius: 50px;
+        font-family: nunito, sans-serif;
+        width: fit-content;
+    }
+    .info__icons{
+        display: flex;
+
+        position: absolute;
+        right: -10px;
+        top: -7px;
+        bottom: -7px;
+        padding: 15px;
+
+        border-radius: 50%;
+        border: 2px solid black;
+        background-color: rgb(208, 208, 208);
+        color: black;
+
+        justify-content: center;
+        align-items: center;
+        transition-property: transform, background-color;
+        transition-duration: 0.2s;
+
+    }
+    .info__icons:hover{
+        transform: scale(1.2);
+        background-color: white;
+        color: black;
+    }
+
+
+
+
+
+</style>
