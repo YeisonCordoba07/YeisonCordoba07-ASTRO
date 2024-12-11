@@ -1,18 +1,56 @@
 ---
 
 ---
+<script>
+
+  const handleScroll = () => {
+
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    let currentSection = "";
+
+    // Detecta la seccion activa
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      console.log(window.scrollY);
+
+      if (window.scrollY >= sectionTop - sectionHeight / 3) {
+        currentSection = section.getAttribute("id");
+      }
+    });
+
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${currentSection}`) {
+        link.classList.add("active");
+      }
+    });
+
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+</script>
+
+
+
 
 <header>
     <nav class="navbar">
-        <a href="#inicio">Inicio</a>
-        <a href="#conocimientos">Conocimientos</a>
-        <a href="#proyectos">Proyectos</a>
+        <a href="#inicio" class="nav-link" id="link-inicio">Inicio</a>
+        <a href="#conocimientos" class="nav-link" id="link-conocimientos">Conocimientos</a>
+        <a href="#proyectos" class="nav-link" id="link-proyectos">Proyectos</a>
     </nav>
 </header>
 
 
+
+
 <style>
-    header{
+    header {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -22,7 +60,7 @@
         margin-top: 8px;
     }
 
-    .navbar{
+    .navbar {
         height: 50px;
 
         display: flex;
@@ -48,12 +86,23 @@
             backdrop-filter: blur(12px);
         }
     }
-    .navbar a{
+
+
+    .nav-link {
         text-decoration: none;
+        color: black;
         font-family: Fredoka, Nunito, serif;
         font-weight: 600;
-        color: black;
+        transition: color 0.2s, border-bottom 0.3s;
     }
 
-    .
+    .nav-link:hover {
+        color: goldenrod;
+    }
+
+    .nav-link.active {
+        color: #ff9100;
+        border-bottom: 3px solid #ff9100;
+    }
+
 </style>
