@@ -7,12 +7,21 @@ import TitleSection from "./TitleSection.astro";
 
     <TitleSection title="Proyectos"/>
 
+    <div class="projects__introduction">
+      <p>Estos proyectos fueron realizados como ejercicios prácticos
+          para fortalecer mis habilidades en diseño y desarrollo web
+          utilizando únicamente HTML y CSS. Cada página representó una oportunidad
+          para aprender y perfeccionar técnicas de maquetación y estilos.
+          Cada proyecto refleja mi progreso, mostrando cómo fui mejorando gradualmente
+          mis conocimientos y mi atención al detalle en cada réplica</p>
+    </div>
+
     <div class="projects__container">
 
 
         <CardProject
                 title="Emason"
-                description="Aplicación creada para el bootcamp de pragma. Permite crear productos y asignarlos a categorias y marcas, las cuales también se pueden crear."
+                description="Emason es una aplicación web diseñada para gestionar artículos de compra, permitiendo su asociación con marcas y múltiples categorías. También tiene un sistema de gestión de roles con tres tipos de usuarios, cada uno con permisos específicos según su rol."
                 src="/emasonall-shadow.png"
                 github="https://github.com/YeisonCordoba07/pragma-front"
         >
@@ -58,7 +67,7 @@ import TitleSection from "./TitleSection.astro";
 
         <CardProject
                 title="Master Class"
-                description="Pagina creada para mejorar mis habilidades en maquetando paginas con HTML y CSS. En este punto no sabia como se agregaban iconos o interaciones a las paginas."
+                description="Replica de la página web de MasterClass utilizando únicamente HTML y CSS. Este proyecto se centró en practicar maquetación, recreando la estructura, estilos y tipografía característicos de la plataforma."
                 src="/PaginaMasterClass.jpg"
                 github="https://github.com/YeisonCordoba07/DesarrolloWebEjercicio4"
                 result="https://yeisoncordoba07.github.io/DesarrolloWebEjercicio4/"
@@ -82,7 +91,7 @@ import TitleSection from "./TitleSection.astro";
 
         <CardProject
                 title="Correos España"
-                description="Pagina creada para mejorar mis habilidades en maquetando paginas con HTML y CSS. En este punto no sabia como se agregaban iconos o interaciones a las paginas."
+                description="Recreación de la pagina web de Correos España empleando HTML y CSS. Este proyecto permitió desarrollar habilidades en la construcción de diseños estáticos y layouts organizados."
                 src="/PaginaCorreos.jpg"
                 github="https://github.com/YeisonCordoba07/DesarrolloWebEjercicio7"
                 result="https://yeisoncordoba07.github.io/DesarrolloWebEjercicio7/"
@@ -105,7 +114,7 @@ import TitleSection from "./TitleSection.astro";
 
         <CardProject
                 title="Mercado Libre"
-                description="Pagina creada para mejorar mis habilidades en maquetando paginas con HTML y CSS. En este punto no sabia como se agregaban iconos o interaciones a las paginas."
+                description="Clon de la página web de Mercado Libre implementado con HTML y CSS. El enfoque principal fue la recreación de interfaces de comercio electrónico, trabajando en la disposición de elementos como tarjetas de productos."
                 src="/PaginaMercadoLibre.jpg"
                 github="https://github.com/YeisonCordoba07/DesarrolloWebEjercicio8"
                 result="https://yeisoncordoba07.github.io/DesarrolloWebEjercicio8/"
@@ -170,6 +179,20 @@ import TitleSection from "./TitleSection.astro";
         justify-items: center;
 
         gap: 20px;
+    }
+
+    .projects__introduction{
+        width: 100%;
+        background-color: moccasin;
+        padding: 30px;
+        border-radius: 10px;
+
+    }
+
+    .projects__introduction p{
+        font-family: Nunito, serif;
+        font-size: 20px;
+
     }
 
 
