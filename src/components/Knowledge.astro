@@ -2,7 +2,7 @@
 
 import TitleSection from "./TitleSection.astro";
 ---
-<section class="knowledge section-separation">
+<section class="knowledge section-separation" id="conocimientos">
 
     <TitleSection title="Tecnologías"/>
 
@@ -19,7 +19,7 @@ import TitleSection from "./TitleSection.astro";
 
           <img src="/tecnologias/NEXTJS2.svg" alt="logo css"/>
           <img src="/tecnologias/TAILWINDCSS.svg" alt="logo css"/>
-          <img src="/tecnologias/ASTRO%20NARANJA.svg" alt="logo css"/>
+          <img class="img-border" src="/tecnologias/ASTRO%20NARANJA.svg" alt="logo css"/>
           <img src="/tecnologias/JAVA.svg" alt="logo css"/>
           <img src="/tecnologias/SPRING%20BOOT.svg" alt="logo css"/>
           <img src="/tecnologias/MYSQL.svg" alt="logo css"/>
@@ -71,9 +71,16 @@ import TitleSection from "./TitleSection.astro";
         display: flex;
         width: 1024px;
         flex-wrap: wrap;
+        box-sizing: border-box;
     }
 
     @media (max-width: 767px){
+
+        .knowledge__container {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
         .knowledge__container img{
             width: 100px;
         }
