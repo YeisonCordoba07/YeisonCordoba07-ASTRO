@@ -1,0 +1,59 @@
+---
+
+---
+
+<header>
+    <nav class="navbar">
+        <a href="#">Inicio</a>
+        <a href="#">Conocimientos</a>
+        <a href="#">Proyectos</a>
+    </nav>
+</header>
+
+
+<style>
+    header{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 20;
+        margin-top: 8px;
+    }
+
+    .navbar{
+        height: 50px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 30px;
+        border-radius: 25px;
+
+        animation: nav-shadow 1s linear both;
+        animation-timeline: scroll();
+        animation-range: 0 100px;
+        //filter: blur(8px) brightness(1.2) contrast(1.5) opacity(0.9) saturate(1.8);
+    }
+
+    @keyframes nav-shadow {
+        0% {
+            background-color: rgb(255 255 255 / 0);
+        }
+        100% {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+    }
+    .navbar a{
+        text-decoration: none;
+        font-family: Fredoka, Nunito, serif;
+        font-weight: 600;
+        color: black;
+    }
+
+    .
+</style>
