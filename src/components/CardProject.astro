@@ -27,7 +27,7 @@ const {title, description, src, github, result} = Astro.props;
 
     <div class="card-project__button-container">
 
-      {result ? <a class="card-project__link" href={result}>
+      {result ? <a class="card-project__link" href={result} target="_blank">
           <Button>
               <span class="card-project__arrow">
                 Ver
@@ -48,7 +48,7 @@ const {title, description, src, github, result} = Astro.props;
           </Button>
       </a> : null}
 
-      {github ? <a class="card-project__link" href={github}>
+      {github ? <a class="card-project__link" href={github} target="_blank">
           <Button src="/github-black.svg">Codigo</Button>
       </a> : null}
 
