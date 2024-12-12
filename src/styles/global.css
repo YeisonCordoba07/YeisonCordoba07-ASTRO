@@ -7,6 +7,19 @@
     --button-text-color: white;
     --button-font-family: 'Roboto', sans-serif;
     --button-font-size: 18px;
+
+    /* -------------------- Card Project -------------------- */
+    --card-project-image-gradient: linear-gradient(
+            45deg,
+            rgba(64, 156, 255, 0.3),
+            rgba(218, 143, 255, 0.4),
+            rgba(255, 105, 97, 0.2),
+            rgba(255, 179, 64, 0.5),
+            rgba(255, 212, 38, 0.3)
+    );
+    --card-project-title: black;
+    --card-project-description: black;
+
 }
 
 *{

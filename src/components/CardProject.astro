@@ -1,187 +1,179 @@
 ---
 import Button from "./Button.astro";
 import Tooltip from "./Tooltip.astro";
-const {title, description, src, github, result, showInfo} = Astro.props;
-
+const { title, description, src, githubLink, resultLink, showInfo } =
+  Astro.props;
 ---
 
 <article class="card-project">
-  {showInfo &&
-
-          <div class="tooltip-container">
-              <Tooltip class="tooltip">
-                  Estos proyectos fueron ejercicios para mejorar mis habilidades en
-                  diseño y desarrollo web con HTML y CSS.
-                  Cada uno refleja mi progreso, mostrando cómo fui mejorando
-                  mis conocimientos y mi atención al detalle en cada réplica
-              </Tooltip>
-
-          </div>
+  {
+    showInfo && (
+      <div class="tooltip-container">
+        <Tooltip class="tooltip">
+          Estos proyectos fueron ejercicios para mejorar mis habilidades en
+          diseño y desarrollo web con HTML y CSS. Cada uno refleja mi progreso,
+          mostrando cómo fui mejorando mis conocimientos y mi atención al
+          detalle en cada réplica
+        </Tooltip>
+      </div>
+    )
   }
 
-    <h3 class="card-project__title">{title ? title : "Titulo proyecto"}</h3>
+  <h3 class="card-project__title">
+    {title ? title : "Titulo proyecto"}
+  </h3>
 
-    <div class="card-project__image-container">
-        <img
-                class="card-project__image"
-                src={src}
-                alt="Imagen del proyecto"
-        />
-    </div>
+  <figure class="card-project__image-container">
+    <img class="card-project__image" src={src} alt="Imagen del proyecto" />
+  </figure>
 
+  <p class="card-project__description">
+    {description ? description : "Descripcion proyecto"}
+  </p>
 
-    <p class="card-project__description">{description ? description : "Descripcion proyecto"}</p>
+  <div class="card-project__tag">
+    <slot />
+  </div>
 
-
-    <div class="card-project__tag">
-        <slot/>
-
-    </div>
-
-
-    <div class="card-project__button-container">
-
-      {result ? <a class="card-project__link" href={result} target="_blank">
+  <div class="card-project__button-container">
+    {
+      resultLink ?
+      (
+        <a class="card-project__link" href={resultLink} target="_blank">
           <Button>
-              <span class="card-project__arrow">
-                Ver
-
-                  <svg
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-width="2"
-                          viewBox="0 0 24 24"
-                          height="23"
-                          width="23"
-                          xmlns="http://www.w3.org/2000/svg">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                  </svg>
-
-                </span>
+            <span class="card-project__arrow">
+              Ver
+              <svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                height="23"
+                width="23"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </span>
           </Button>
-      </a> : null}
+        </a>
+      ) : null
+    }
 
-      {github ? <a class="card-project__link" href={github} target="_blank">
-          <Button src="/github-black.svg">Codigo</Button>
-      </a> : null}
-
-    </div>
+    {
+      githubLink ? (
+        <a class="card-project__link" href={githubLink} target="_blank">
+          <Button src="/github-black.svg">Código</Button>
+        </a>
+      ) : null
+    }
+  </div>
 
 </article>
 
-
-
-
 <style>
-    .card-project {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+  .card-project {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
-        border-radius: 10px;
-        padding: 20px;
-        justify-content: center;
-        gap: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    justify-content: center;
+    gap: 10px;
 
-        //box-shadow: 0px 5px 20px 0 rgba(218, 143, 255, 0.2);
-        box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
-        /* background: linear-gradient(
-                 45deg,
-                 rgba(17, 112, 255, 0.2),
-                 rgba(3, 230, 255, 0.05),
-                 rgba(88, 4, 255, 0.2)
-         );*/
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
 
-        position: relative;
-    }
+  .card-project__title {
+    font-weight: 900;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    font-family: var(--font-family);
+		color: var(--card-project-title);
 
-    .card-project__title {
-        font-weight: 900;
-        font-size: 40px;
-        text-align: center;
-        margin-bottom: 20px;
-        width: 100%;
-        font-family: fredoka, nunito, serif;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    overflow: hidden;
+  }
 
-        text-overflow: ellipsis;
-        text-wrap: nowrap;
-        overflow: hidden;
-    }
+  .card-project__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    background: linear-gradient(
+      45deg,
+      rgba(64, 156, 255, 0.3),
+      rgba(218, 143, 255, 0.4),
+      rgba(255, 105, 97, 0.2),
+      rgba(255, 179, 64, 0.5),
+      rgba(255, 212, 38, 0.3)
+    );
+  }
 
+  .card-project__image {
+    width: 90%;
+    border-radius: 5px;
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.4));
+  }
+
+  .card-project__description {
+    font-family: fredoka, nunito, serif;
+		color: var(--card-project-description);
+  }
+
+  .card-project__tag {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+  }
+
+  .card-project__link {
+    text-decoration: none;
+  }
+
+  .card-project__button-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: auto;
+  }
+
+  .card-project__arrow {
+    color: white;
+    display: flex;
+    gap: 15px;
+    font-weight: bold;
+  }
+
+
+
+  .tooltip-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  @media (max-width: 767px) {
     .card-project__image-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 300px;
-        border-radius: 10px;
-        background: linear-gradient(
-                45deg,
-                rgba(64, 156, 255, 0.3),
-                rgba(218, 143, 255, 0.4),
-                rgba(255, 105, 97, 0.2),
-                rgba(255, 179, 64, 0.5),
-                rgba(255, 212, 38, 0.3)
-        );
-
+      height: 350px;
     }
 
     .card-project__image {
-        width: 90%;
-        border-radius: 5px;
-        filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.4));
+      width: 90%;
     }
-
-    .card-project__description {
-        font-family: fredoka, nunito, serif;
-    }
-
-    .card-project__tag {
-        display: flex;
-        gap: 5px;
-        flex-wrap: wrap;
-        margin: 15px 0;
-    }
-
-    .card-project__link {
-        text-decoration: none;
-    }
-
-    .card-project__button-container {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        margin-top: auto;
-    }
-
-
-    .card-project__arrow {
-        color: white;
-        display: flex;
-        gap: 15px;
-        font-weight: bold;
-    }
-
-    .tooltip-container{
-        position: absolute;
-        top:20px;
-        right:20px;
-    }
-
-
-
-    @media (max-width: 767px) {
-        /* Estilos específicos para móviles pequeños */
-        .card-project__image-container{
-          height: 350px;
-        }
-        .card-project__image{
-            width: 90%;
-        }
-    }
-
+  }
 
 </style>
-
