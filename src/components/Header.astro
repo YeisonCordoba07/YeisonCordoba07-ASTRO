@@ -17,7 +17,7 @@
       console.log(window.scrollY);
 
       if (window.scrollY >= sectionTop - sectionHeight / 3) {
-        currentSection = section.getAttribute("id");
+        currentSection = section.getAttribute("id")  ?? "";
       }
     });
 
