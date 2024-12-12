@@ -37,8 +37,7 @@ const { title, description, src, githubLink, resultLink, showInfo } =
 
   <div class="card-project__button-container">
     {
-      resultLink ?
-      (
+      resultLink ? (
         <a class="card-project__link" href={resultLink} target="_blank">
           <Button>
             <span class="card-project__arrow">
@@ -72,7 +71,6 @@ const { title, description, src, githubLink, resultLink, showInfo } =
       ) : null
     }
   </div>
-
 </article>
 
 <style>
@@ -98,7 +96,7 @@ const { title, description, src, githubLink, resultLink, showInfo } =
     margin-bottom: 20px;
     width: 100%;
     font-family: var(--font-family);
-		color: var(--card-project-title);
+    color: var(--card-project-title);
 
     text-overflow: ellipsis;
     text-wrap: nowrap;
@@ -130,7 +128,7 @@ const { title, description, src, githubLink, resultLink, showInfo } =
 
   .card-project__description {
     font-family: fredoka, nunito, serif;
-		color: var(--card-project-description);
+    color: var(--card-project-description);
   }
 
   .card-project__tag {
@@ -158,8 +156,6 @@ const { title, description, src, githubLink, resultLink, showInfo } =
     font-weight: bold;
   }
 
-
-
   .tooltip-container {
     position: absolute;
     top: 20px;
@@ -175,5 +171,4 @@ const { title, description, src, githubLink, resultLink, showInfo } =
       width: 90%;
     }
   }
-
 </style>
