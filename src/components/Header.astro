@@ -91,7 +91,7 @@
     .nav-link {
         text-decoration: none;
         color: black;
-        font-family: Fredoka, Nunito, serif;
+        font-family: var(--font-family);
         font-weight: 600;
         transition: color 0.2s, border-bottom 0.3s;
         font-size: 20px;
@@ -109,6 +109,7 @@
     @media (max-width: 350px){
         .navbar{
             gap: 15px;
+            max-width: 100%;
         }
         .nav-link {
             font-size: 16px;

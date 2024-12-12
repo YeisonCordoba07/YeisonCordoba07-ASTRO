@@ -1,7 +1,46 @@
 :root{
     --mobile-font-title-size: 45px;
     --font-family: Fredoka, Nunito, serif;
+    --border-radius: 10px;
+
+
+    /* -------------------- Button -------------------- */
+    --button-background: #202020;
+    --button-text-color: white;
+    --button-font-family: 'Roboto', sans-serif;
+    --button-font-size: 18px;
+
+
+    /* -------------------- Card Project -------------------- */
+    --card-project-image-gradient: linear-gradient(
+            45deg,
+            rgba(64, 156, 255, 0.3),
+            rgba(218, 143, 255, 0.4),
+            rgba(255, 105, 97, 0.2),
+            rgba(255, 179, 64, 0.5),
+            rgba(255, 212, 38, 0.3)
+    );
+    --card-project-title: black;
+    --card-project-description: black;
+
+
+    /* -------------------- Copy Element -------------------- */
+    --copy-element-text-color: white;
+    --copy-element-background-color: rgb(64, 67, 79);
+    --copy-element-svg-background-color: white;
+    --copy-element-svg-color: black;
+    --copy-element-svg-color-hover: black;
+
+
+    /* -------------------- Info -------------------- */
+    --info-profile-background: #fff1f1;
+    --info-profile-subtitle-color: dodgerblue;
+    --info-profile-title-color: black;
+    --info-profile-text-color: #262626;
+
 }
+
+
 
 *{
     margin: 0;
@@ -31,3 +70,7 @@
 .profile__icons:hover {
     transform: scale(1.25);
 }
+
+
+
+

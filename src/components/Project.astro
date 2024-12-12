@@ -14,42 +14,30 @@ import TitleSection from "./TitleSection.astro";
                 title="Emason"
                 description="Emason es una aplicación web diseñada para gestionar artículos de compra, permitiendo su asociación con marcas y múltiples categorías. También tiene un sistema de gestión de roles con tres tipos de usuarios, cada uno con permisos específicos según su rol."
                 src="/emasonall-shadow.png"
-                github="https://github.com/YeisonCordoba07/pragma-front"
+                githubLink="https://github.com/YeisonCordoba07/pragma-front"
         >
             <Tag
                     tagName="JavaScript"
-                    color="black"
-                    background="white"
                     src="/javascript.svg"
             />
             <Tag
                     tagName="TypeScript"
-                    color="black"
-                    background="white"
                     src="/typescript.svg"
             />
             <Tag
                     tagName="Angular"
-                    color="black"
-                    background="white"
                     src="/angular18.svg"
             />
             <Tag
                     tagName="Java"
-                    color="black"
-                    background="white"
                     src="/java.svg"
             />
             <Tag
                     tagName="Spring"
-                    color="black"
-                    background="white"
                     src="/spring.svg"
             />
             <Tag
                     tagName="MySQL"
-                    color="black"
-                    background="white"
                     src="/mysql.svg"
             />
         </CardProject>
@@ -60,21 +48,17 @@ import TitleSection from "./TitleSection.astro";
                 title="Master Class"
                 description="Replica de la página web de MasterClass utilizando únicamente HTML y CSS. Este proyecto se centró en practicar maquetación, recreando la estructura, estilos y tipografía característicos de la plataforma."
                 src="/PaginaMasterClass.jpg"
-                github="https://github.com/YeisonCordoba07/DesarrolloWebEjercicio4"
-                result="https://yeisoncordoba07.github.io/DesarrolloWebEjercicio4/"
+                githubLink="https://github.com/YeisonCordoba07/DesarrolloWebEjercicio4"
+                resultLink="https://yeisoncordoba07.github.io/DesarrolloWebEjercicio4/"
                 showInfo="true"
         >
             <Tag
                     tagName="HTML"
-                    color="black"
-                    background="white"
                     src="/html5.svg"
             />
 
             <Tag
                     tagName="CSS"
-                    color="black"
-                    background="white"
                     src="/css.svg"
             />
 
@@ -85,21 +69,17 @@ import TitleSection from "./TitleSection.astro";
                 title="Correos España"
                 description="Recreación de la pagina web de Correos España empleando HTML y CSS. Este proyecto permitió desarrollar habilidades en la construcción de diseños estáticos y layouts organizados."
                 src="/PaginaCorreos.jpg"
-                github="https://github.com/YeisonCordoba07/DesarrolloWebEjercicio7"
-                result="https://yeisoncordoba07.github.io/DesarrolloWebEjercicio7/"
+                githubLink="https://github.com/YeisonCordoba07/DesarrolloWebEjercicio7"
+                resultLink="https://yeisoncordoba07.github.io/DesarrolloWebEjercicio7/"
                 showInfo="true"
         >
             <Tag
                     tagName="HTML"
-                    color="black"
-                    background="white"
                     src="/html5.svg"
             />
 
             <Tag
                     tagName="CSS"
-                    color="black"
-                    background="white"
                     src="/css.svg"
             />
 
@@ -109,21 +89,17 @@ import TitleSection from "./TitleSection.astro";
                 title="Mercado Libre"
                 description="Clon de la página web de Mercado Libre implementado con HTML y CSS. El enfoque principal fue la recreación de interfaces de comercio electrónico, trabajando en la disposición de elementos como tarjetas de productos."
                 src="/PaginaMercadoLibre.jpg"
-                github="https://github.com/YeisonCordoba07/DesarrolloWebEjercicio8"
-                result="https://yeisoncordoba07.github.io/DesarrolloWebEjercicio8/"
+                githubLink="https://github.com/YeisonCordoba07/DesarrolloWebEjercicio8"
+                resultLink="https://yeisoncordoba07.github.io/DesarrolloWebEjercicio8/"
                 showInfo="true"
         >
             <Tag
                     tagName="HTML"
-                    color="black"
-                    background="white"
                     src="/html5.svg"
             />
 
             <Tag
                     tagName="CSS"
-                    color="black"
-                    background="white"
                     src="/css.svg"
             />
 
@@ -148,20 +124,6 @@ import TitleSection from "./TitleSection.astro";
         gap: 40px;
     }
 
-    .projects__title {
-        text-align: center;
-        font-size: 60px;
-        font-family: fredoka, nunito, serif;
-        font-weight: 900;
-        margin: 0;
-        background: linear-gradient(45deg, rgb(255, 151, 0), rgb(255, 190, 92), rgb(255, 119, 0));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-
-        text-wrap: nowrap;
-        text-overflow: ellipsis;
-    }
-
     .projects__container {
         width: 100%;
         margin: auto;
@@ -171,7 +133,6 @@ import TitleSection from "./TitleSection.astro";
 
         align-items: center;
         justify-items: center;
-
         gap: 20px;
     }
 
@@ -179,7 +140,6 @@ import TitleSection from "./TitleSection.astro";
 
 
     @media (max-width: 767px) {
-        /* Estilos específicos para móviles pequeños */
         .projects__container {
             grid-template-columns: 1fr;
             grid-template-rows: auto;
@@ -191,7 +151,6 @@ import TitleSection from "./TitleSection.astro";
     }
 
     @media (min-width: 768px) and (max-width: 1023px) {
-        /* Estilos para tablets en modo vertical */
         .projects__container {
             grid-template-columns: 49% 49%;
             grid-template-rows: auto;
@@ -203,7 +162,6 @@ import TitleSection from "./TitleSection.astro";
     }
 
     @media (min-width: 1024px) {
-        /* Estilos para pantallas medianas */
         .projects__container {
             min-width: 1024px;
         }
