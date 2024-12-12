@@ -1,5 +1,6 @@
 :root{
     --mobile-font-title-size: 45px;
+    --font-family: Fredoka, Nunito, serif;
 }
 
 *{
@@ -9,8 +10,7 @@
 }
 
 .section-separation{
-    padding-bottom: 80px;
-    padding-top: 80px;
+    padding: 80px 15px;
 }
 
 
