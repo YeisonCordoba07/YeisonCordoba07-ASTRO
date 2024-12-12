@@ -5,13 +5,7 @@ const {tagName, color, background, src} = Astro.props;
 <div class="tag" style=`background: ${background}`>
     <img src={src} alt="tag icon"/>
 
-    <span
-            class="tag__name"
-            style=`background: ${background}; color: ${color}`>
-
-    {tagName}
-
-  </span>
+    <span class="tag__name" style=`background: ${background}; color: ${color}`>{tagName}</span>
 
 </div>
 
