@@ -1,12 +1,12 @@
 ---
-const { text, src, color, background } = Astro.props;
+const { src } = Astro.props;
 
 ---
 
-<button class="button" style=`background-color: ${background}`>
+<button class="button">
         
     {src ? <img class="button__icon" src={src} alt=""/> : null}
-    <span class="button__text" style=`color: ${color}`>
+    <span class="button__text">
         <slot/>
     </span>
         
@@ -28,14 +28,11 @@ const { text, src, color, background } = Astro.props;
         transition: transform 0.2s;
         border: none;
         cursor: pointer;
-        //box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3);
-        background: #202020;
-        /*background: linear-gradient(to right, #ff8e1c, #ff2929);*/
+        background: var(--button-background);
     }
 
     .button:hover{
         transform: scale(1.1);
-        /*background: linear-gradient(to right, #14b8a6, #22c55e);*/
     }
 
     .button__icon{
@@ -44,9 +41,9 @@ const { text, src, color, background } = Astro.props;
     }
 
     .button__text{
-        font-size: 18px;
-        font-family: 'Roboto', sans-serif;
-        color: white;
+        font-size: var(--button-font-size);
+        font-family: var(--button-font-family);
+        color: var(--button-text-color);
         font-weight: 600;
     }
 

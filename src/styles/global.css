@@ -1,6 +1,12 @@
 :root{
     --mobile-font-title-size: 45px;
     --font-family: Fredoka, Nunito, serif;
+
+    /* -------------------- Button -------------------- */
+    --button-background: #202020;
+    --button-text-color: white;
+    --button-font-family: 'Roboto', sans-serif;
+    --button-font-size: 18px;
 }
 
 *{
@@ -31,3 +37,7 @@
 .profile__icons:hover {
     transform: scale(1.25);
 }
+
+
+
+
