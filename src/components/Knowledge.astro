@@ -4,7 +4,7 @@ import TitleSection from "./TitleSection.astro";
 ---
 <section class="knowledge section-separation" id="conocimientos">
 
-    <TitleSection title="Tecnologías"/>
+    <TitleSection title="Conocimientos"/>
 
     <div class="knowledge__background-container">
 
@@ -74,8 +74,21 @@ import TitleSection from "./TitleSection.astro";
         box-sizing: border-box;
     }
 
-    @media (max-width: 767px){
 
+    @media(max-width: 400px){
+        .knowledge__background-container{
+            padding: 40px 10px;
+        }
+        .knowledge__container img{
+            width: 80px;
+        }
+    }
+
+    @media(min-width: 401px) and (max-width: 767px){
+
+        .knowledge__background-container{
+            padding: 30px;
+        }
         .knowledge__container {
             display: flex;
             width: 100%;
@@ -85,8 +98,6 @@ import TitleSection from "./TitleSection.astro";
             width: 100px;
         }
     }
-
-
 
     @media (max-width: 1023px){
         .knowledge__background-container{

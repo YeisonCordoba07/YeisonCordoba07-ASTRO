@@ -1,3 +1,7 @@
+:root{
+    --mobile-font-title-size: 45px;
+}
+
 *{
     margin: 0;
     padding: 0;

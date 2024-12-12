@@ -96,11 +96,6 @@ const {title, description, src, github, result, showInfo} = Astro.props;
 
         position: relative;
     }
-    .tooltip-container{
-        position: absolute;
-        top:20px;
-        right:20px;
-    }
 
     .card-project__title {
         font-weight: 900;
@@ -168,6 +163,14 @@ const {title, description, src, github, result, showInfo} = Astro.props;
         gap: 15px;
         font-weight: bold;
     }
+
+    .tooltip-container{
+        position: absolute;
+        top:20px;
+        right:20px;
+    }
+
+
 
     @media (max-width: 767px) {
         /* Estilos específicos para móviles pequeños */
