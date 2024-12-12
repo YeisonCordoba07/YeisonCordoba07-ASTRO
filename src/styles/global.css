@@ -20,6 +20,13 @@
     --card-project-title: black;
     --card-project-description: black;
 
+    /* -------------------- Card Project -------------------- */
+    --copy-element-text-color: white;
+    --copy-element-background-color: rgb(64, 67, 79);
+    --copy-element-svg-background-color: white;
+    --copy-element-svg-color: black;
+    --copy-element-svg-color-hover: black;
+
 }
 
 *{
