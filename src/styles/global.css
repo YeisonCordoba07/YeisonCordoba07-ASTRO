@@ -1,12 +1,15 @@
 :root{
     --mobile-font-title-size: 45px;
     --font-family: Fredoka, Nunito, serif;
+    --border-radius: 10px;
+
 
     /* -------------------- Button -------------------- */
     --button-background: #202020;
     --button-text-color: white;
     --button-font-family: 'Roboto', sans-serif;
     --button-font-size: 18px;
+
 
     /* -------------------- Card Project -------------------- */
     --card-project-image-gradient: linear-gradient(
@@ -20,12 +23,20 @@
     --card-project-title: black;
     --card-project-description: black;
 
-    /* -------------------- Card Project -------------------- */
+
+    /* -------------------- Copy Element -------------------- */
     --copy-element-text-color: white;
     --copy-element-background-color: rgb(64, 67, 79);
     --copy-element-svg-background-color: white;
     --copy-element-svg-color: black;
     --copy-element-svg-color-hover: black;
+
+
+    /* -------------------- Info -------------------- */
+    --info-profile-background: #fff1f1;
+    --info-profile-subtitle-color: dodgerblue;
+    --info-profile-title-color: black;
+    --info-profile-text-color: #262626;
 
 }
 
