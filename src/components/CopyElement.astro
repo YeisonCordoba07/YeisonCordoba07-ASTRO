@@ -2,90 +2,109 @@
 
 ---
 
+<script client:load>
+
+  function copyContent() {
+
+    const textToCopy = document.querySelector("#emailText").textContent;
+
+    navigator.clipboard.writeText(textToCopy).then(
+      () => {
+        alert("Texto copiado al portapapeles!");
+      },
+      (err) => {
+        console.error("Error al copiar texto: ", err);
+      }
+    );
+  }
+
+</script>
+
+
+
+
 <div class="copy-element">
   <span class="copy-element__title">
-    
-    <slot />
 
-    <span class="info__icons">
+    <span id="emailText"><slot/></span>
+    <button class="copy-element__copy-button" onclick="copyContent()">
       <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        width="24"
-        height="24"
-        fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
       >
         <!-- Documento detrás -->
         <rect
-          x="4"
-          y="7"
-          width="14"
-          height="16"
-          rx="4"
-          ry="4"
-          fill="#currentColor"
-          stroke="currentColor"
-          stroke-width="2"></rect>
-        <!-- Documento frente -->
+                x="4"
+                y="7"
+                width="14"
+                height="16"
+                rx="4"
+                ry="4"
+                fill="#currentColor"
+                stroke="currentColor"
+                stroke-width="2"
+        ></rect>
+          <!-- Documento frente -->
         <rect
-          x="7"
-          y="4"
-          width="14"
-          height="16"
-          rx="3"
-          ry="3"
-          fill="#ffffff"
-          stroke="currentColor"
-          stroke-width="2"></rect>
+                x="7"
+                y="4"
+                width="14"
+                height="16"
+                rx="3"
+                ry="3"
+                fill="#ffffff"
+                stroke="currentColor"
+                stroke-width="2"
+        ></rect>
       </svg>
+    </button>
   </span>
-
 </div>
 
 
 
-
 <style>
+    .copy-element__title {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid black;
+        background-color: var(--copy-element-background-color);
+        color: var(--copy-element-text-color);
+        padding: 10px 70px 10px 20px;
+        border-radius: 50px;
+        font-family: 'Roboto', serif;
+        width: fit-content;
+    }
 
-  .copy-element__title {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    border: 1px solid black;
-    background-color: var(--copy-element-background-color);
-    color: var(--copy-element-text-color);
-    padding: 10px 70px 10px 20px;
-    border-radius: 50px;
-    font-family: 'Roboto', serif;
-    width: fit-content;
-  }
+    .copy-element__copy-button {
+        display: flex;
+        position: absolute;
+        right: -1px;
+        top: -7px;
+        bottom: -7px;
+        padding: 15px;
 
-  .info__icons {
-    display: flex;
-    position: absolute;
-    right: -1px;
-    top: -7px;
-    bottom: -7px;
-    padding: 15px;
+        border-radius: 50%;
+        border: 2px solid black;
+        background-color: var(--copy-element-svg-background-color);
+        color: var(--copy-element-svg-color);
 
-    border-radius: 50%;
-    border: 2px solid black;
-    background-color: var(--copy-element-svg-background-color);
-    color: var(--copy-element-svg-color);
+        justify-content: center;
+        align-items: center;
+        transition-property: transform, background-color;
+        transition-duration: 0.2s;
+    }
 
-    justify-content: center;
-    align-items: center;
-    transition-property: transform, background-color;
-    transition-duration: 0.2s;
-  }
+    .copy-element__copy-button:hover {
+        transform: scale(1.2);
+        color: var(--copy-element-svg-color-hover);
+    }
 
-  .info__icons:hover {
-    transform: scale(1.2);
-    color: var(--copy-element-svg-color-hover);
-  }
-
-  .info__icons:active {
-    background-color: lightgray;
-  }
-
+    .copy-element__copy-button:active {
+        background-color: lightgray;
+    }
 </style>
