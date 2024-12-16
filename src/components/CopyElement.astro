@@ -3,7 +3,7 @@
 ---
 
 <script>
-  /*function copyContent() {
+  function copyContent() {
     const textElement = document.querySelector("#emailText");
     if (textElement && textElement.textContent) {
       const textToCopy = textElement.textContent;
@@ -18,7 +18,7 @@
     } else {
       console.error("El elemento o su contenido no existen.");
     }
-  }*/
+  }
 </script>
 
 
@@ -28,7 +28,7 @@
   <span class="copy-element__title">
 
     <span id="emailText"><slot/></span>
-    <button class="copy-element__copy-button">
+    <button class="copy-element__copy-button" onclick="copyContent()">
       <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
