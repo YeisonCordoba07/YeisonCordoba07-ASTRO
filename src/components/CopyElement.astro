@@ -3,21 +3,22 @@
 ---
 
 <script>
-
   function copyContent() {
-
-    const textToCopy = document.querySelector("#emailText").textContent;
-
-    navigator.clipboard.writeText(textToCopy).then(
-      () => {
-        alert("Texto copiado al portapapeles!");
-      },
-      (err) => {
-        console.error("Error al copiar texto: ", err);
-      }
-    );
+    const textElement = document.querySelector("#emailText");
+    if (textElement && textElement.textContent) {
+      const textToCopy = textElement.textContent;
+      navigator.clipboard.writeText(textToCopy).then(
+        () => {
+          alert("Texto copiado al portapapeles!");
+        },
+        (err) => {
+          console.error("Error al copiar texto: ", err);
+        }
+      );
+    } else {
+      console.error("El elemento o su contenido no existen.");
+    }
   }
-
 </script>
 
 
