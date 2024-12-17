@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="es-CO">
 <head>
+    <script is:inline>
+      (function () {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      })();
+    </script>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width"/>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
@@ -13,28 +19,7 @@
           rel="stylesheet">
 </head>
 <body>
-<button id="theme-toggle">Cambiar Tema</button>
-
-<script>
-  // Obtenemos el botón
-  const themeToggleButton = document.getElementById('theme-toggle');
-
-  // Cambiamos el tema al hacer clic en el botón
-  themeToggleButton.addEventListener('click', () => {
-    // Obtenemos el tema actual
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-
-    // Calculamos el nuevo tema
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-
-    // Aplicamos el nuevo tema
-    document.documentElement.setAttribute('data-theme', newTheme);
-
-    // Guardamos el nuevo tema en localStorage
-    localStorage.setItem('theme', newTheme);
-  });
-</script>
-<slot/>
+  <slot/>
 </body>
 </html>
 
