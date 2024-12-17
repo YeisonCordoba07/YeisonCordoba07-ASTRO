@@ -80,6 +80,12 @@
             rgba(255, 212, 38, 0.3)
     );
 
+
+    /* -------------------- Tag -------------------- */
+    --tag-background: white;
+    --tag-text-color: #2f2f2f;
+    --tag-border-color: black;
+
 }
 
 
@@ -149,6 +155,12 @@
             rgb(185, 81, 255),
             rgb(196, 81, 255)
     );
+
+
+    /* -------------------- Tag -------------------- */
+    --tag-background: rgba(0, 0, 0, 0.5);
+    --tag-text-color: #e5e5e5;
+    --tag-border-color: #525252;
 }
 
 
