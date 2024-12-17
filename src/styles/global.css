@@ -183,7 +183,7 @@
 
     /* -------------------- Header -------------------- */
     --header-background: rgba(0, 0, 0, 0.7);
-    --header-text-color: #dcdcdc;
+    --header-text-color: #f1f1f1;
 
     --header-active-text-color: dodgerblue;
     --header-active-text-color-hover: #56c8ff;
