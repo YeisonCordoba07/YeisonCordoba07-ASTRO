@@ -39,17 +39,44 @@
 
 
 <script is:inline>
-  function changeTheme(){
-
+  function changeTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
-
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
     document.documentElement.setAttribute('data-theme', newTheme);
-
     localStorage.setItem('theme', newTheme);
+
+    // Íconos
+    const moonIcon = document.getElementById('moon-icon');
+    const sunIcon = document.getElementById('sun-icon');
+
+    if (newTheme === 'dark') {
+      moonIcon.style.display = 'none';
+      sunIcon.style.display = 'block';
+    } else {
+      moonIcon.style.display = 'block';
+      sunIcon.style.display = 'none';
+    }
   }
+
+  // Al cargar la página, ajusta el ícono según el tema guardado
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    const moonIcon = document.getElementById('moon-icon');
+    const sunIcon = document.getElementById('sun-icon');
+
+    if (savedTheme === 'dark') {
+      moonIcon.style.display = 'none';
+      sunIcon.style.display = 'block';
+    } else {
+      moonIcon.style.display = 'block';
+      sunIcon.style.display = 'none';
+    }
+  });
 </script>
+
 
 
 
@@ -60,22 +87,15 @@
         <a href="#conocimientos" class="nav-link" id="link-conocimientos">Conocimientos</a>
         <a href="#proyectos" class="nav-link" id="link-proyectos">Proyectos</a>
         <button class="nav-theme" onclick="changeTheme()">
-
-            <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-                <!-- Círculo más grande (base) -->
+            <!-- Ícono de luna (modo claro) -->
+            <svg id="moon-icon" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" style="display: block;">
                 <circle cx="15" cy="15" r="12" fill="black" />
-                <!-- Círculo más pequeño (resta) -->
                 <circle cx="19" cy="12" r="9" fill="white" />
             </svg>
 
-
-            <!-- light-mode-icon.svg -->
-            <svg width="30" height="30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <!-- Fondo blanco -->
-                <rect fill="none" x="0" y="0" width="100" height="100" rx="15"/>
-                <!-- Sol negro -->
+            <!-- Ícono de sol (modo oscuro) -->
+            <svg id="sun-icon" width="30" height="30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="display: none;">
                 <circle cx="50" cy="50" r="20" fill="#ffffff"/>
-                <!-- Rayos del sol -->
                 <line x1="50" y1="5" x2="50" y2="15" stroke="#ffffff" stroke-width="3"/>
                 <line x1="50" y1="85" x2="50" y2="95" stroke="#ffffff" stroke-width="3"/>
                 <line x1="5" y1="50" x2="15" y2="50" stroke="#ffffff" stroke-width="3"/>
@@ -85,10 +105,8 @@
                 <line x1="20" y1="80" x2="30" y2="70" stroke="#ffffff" stroke-width="3"/>
                 <line x1="80" y1="80" x2="70" y2="70" stroke="#ffffff" stroke-width="3"/>
             </svg>
-
-
-
         </button>
+
     </nav>
 </header>
 
