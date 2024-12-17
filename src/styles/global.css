@@ -3,6 +3,8 @@
     --font-family: Fredoka, Nunito, serif;
     --border-radius: 10px;
 
+    --document-background-color: white;
+
 
     /* -------------------- Button -------------------- */
     --button-background: #202020;
@@ -33,13 +35,75 @@
 
 
     /* -------------------- Info -------------------- */
-    --info-profile-background: #fff1f1;
     --info-profile-subtitle-color: dodgerblue;
     --info-profile-title-color: black;
     --info-profile-text-color: #262626;
+    --info-profile-background: #fff1f1;
+    --info-profile-gradient-background: linear-gradient(
+            45deg,
+            rgba(64, 156, 255, 0.4),
+            rgba(218, 143, 255, 0.6),
+            rgba(255, 105, 97, 0.25),
+            rgba(255, 179, 64, 0.3),
+            rgba(255, 212, 0, 0.5)
+    );
+
+
+
+    /* -------------------- Social Icons -------------------- */
+    --social-icons-background: #ffffff;
+    --social-icons-color: black;
 
 }
+/* -------------------- Dark Theme -------------------- */
+[data-theme="dark"] {
 
+    --document-background-color: #262626;
+    --button-background: #000000;
+    --button-text-color: #ffffff;
+
+    --card-project-image-gradient: linear-gradient(
+            45deg,
+            rgba(64, 156, 255, 0.3),
+            rgba(218, 143, 255, 0.4),
+            rgba(255, 105, 97, 0.2),
+            rgba(255, 179, 64, 0.5),
+            rgba(255, 212, 38, 0.3)
+    );
+    --card-project-title: white;
+    --card-project-description: #dddddd;
+
+    --copy-element-text-color: #ffffff;
+    --copy-element-background-color: rgb(33, 33, 33);
+    --copy-element-svg-background-color: #818181;
+    --copy-element-svg-color: #000000;
+    --copy-element-svg-color-hover: var(--copy-element-svg-color);
+
+
+    --info-profile-subtitle-color: #4fffff;
+    --info-profile-title-color: white;
+    --info-profile-text-color: #ffffff;
+
+    --info-profile-background: #d0d0d0;
+    --info-profile-gradient-background: linear-gradient(
+            135deg,
+            rgba(0, 105, 255, 0.7),
+            rgba(110, 77, 255, 0.8),
+            rgba(218, 143, 255, 0.8)
+    );
+
+    --profile-image-gradient-background: linear-gradient(
+            75deg,
+            rgba(0, 105, 255, 0.7),
+            rgba(110, 77, 255, 0.8),
+            rgba(218, 143, 255, 0.8)
+    );
+
+
+    /* -------------------- Social Icons -------------------- */
+    --social-icons-background:  #2a2a2a;
+    --social-icons-color: white;
+}
 
 
 *{
@@ -50,11 +114,12 @@
 
 .section-separation{
     padding: 80px 15px;
+    background-color: inherit;
 }
 
 
-.profile__icons {
-    background-color: white;
+.social__icons {
+    background-color: var(--social-icons-background);
     border-radius: 50%;
     width: fit-content;
     padding: 6px;
@@ -63,11 +128,11 @@
     align-items: center;
     transition-property: transform, background-color;
     transition-duration: 0.2s;
-    color: black;
+    color: var(--social-icons-color);
     cursor: pointer;
 }
 
-.profile__icons:hover {
+.social__icons:hover {
     transform: scale(1.25);
 }
 
