@@ -48,13 +48,29 @@
             rgba(255, 212, 0, 0.5)
     );
 
+    --profile-image-gradient-background: linear-gradient(
+            75deg,
+            rgba(64, 156, 255, 0.2),
+            rgba(218, 143, 255, 0.4),
+            rgba(255, 105, 97, 0.3),
+            rgba(255, 179, 64, 0.4),
+            rgba(255, 212, 38, 0.7)
+    );
 
 
     /* -------------------- Social Icons -------------------- */
     --social-icons-background: #ffffff;
     --social-icons-color: black;
 
+
+    /* -------------------- Knowledge -------------------- */
+    --knowledge-background: paleturquoise;
+    --knowledge-background-container: lightseagreen;
+
 }
+
+
+
 /* -------------------- Dark Theme -------------------- */
 [data-theme="dark"] {
 
@@ -103,6 +119,11 @@
     /* -------------------- Social Icons -------------------- */
     --social-icons-background:  #2a2a2a;
     --social-icons-color: white;
+
+
+    /* -------------------- Knowledge -------------------- */
+    --knowledge-background: #176963;
+    --knowledge-background-container: #083f3b;
 }
 
 
