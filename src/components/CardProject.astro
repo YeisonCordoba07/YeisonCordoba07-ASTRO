@@ -85,8 +85,9 @@ const { title, description, src, githubLink, resultLink, showInfo } =
     justify-content: center;
     gap: 10px;
 
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: var(--card-project-box-shadow);
     position: relative;
+    background-color: var(--card-project-background);
   }
 
   .card-project__title {
@@ -110,14 +111,7 @@ const { title, description, src, githubLink, resultLink, showInfo } =
     width: 100%;
     height: 300px;
     border-radius: 10px;
-    background: linear-gradient(
-      45deg,
-      rgba(64, 156, 255, 0.3),
-      rgba(218, 143, 255, 0.4),
-      rgba(255, 105, 97, 0.2),
-      rgba(255, 179, 64, 0.5),
-      rgba(255, 212, 38, 0.3)
-    );
+    background: var(--card-project-background-gradient);
   }
 
   .card-project__image {
