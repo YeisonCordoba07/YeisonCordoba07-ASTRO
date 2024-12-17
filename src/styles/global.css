@@ -86,6 +86,14 @@
     --tag-text-color: #2f2f2f;
     --tag-border-color: black;
 
+
+    /* -------------------- Header -------------------- */
+    --header-background: rgba(255, 255, 255, 0.7);
+    --header-text-color: black;
+
+
+    /* -------------------- Footer -------------------- */
+    --footer-background:  #171717;
 }
 
 
@@ -93,7 +101,9 @@
 /* -------------------- Dark Theme -------------------- */
 [data-theme="dark"] {
 
-    --document-background-color: #262626;
+    --document-background-color: #001625;
+
+    /* -------------------- Buttons -------------------- */
     --button-background: #000000;
     --button-text-color: #ffffff;
 
@@ -147,7 +157,7 @@
 
     /* -------------------- CardProject -------------------- */
     --card-project-box-shadow: 0 5px 20px 0 rgb(0, 0, 0);
-    --card-project-background: #2d2d2d;
+    --card-project-background: #1b3b45;
     --card-project-background-gradient: linear-gradient(
             135deg,
             rgba(0, 105, 255, 0.8),
@@ -161,6 +171,14 @@
     --tag-background: rgba(0, 0, 0, 0.5);
     --tag-text-color: #e5e5e5;
     --tag-border-color: #525252;
+
+
+    /* -------------------- Header -------------------- */
+    --header-background: rgba(0, 0, 0, 0.7);
+    --header-text-color: #dcdcdc;
+
+    /* -------------------- Footer -------------------- */
+    --footer-background: #090808;
 }
 
 
