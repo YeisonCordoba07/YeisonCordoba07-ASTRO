@@ -95,6 +95,8 @@
     --header-active-text-color-hover: goldenrod;
     --header-active-border-color: var(--header-active-text-color);
 
+    --header-navbar-border: none;
+
 
     /* -------------------- Footer -------------------- */
     --footer-background:  #171717;
@@ -182,12 +184,14 @@
 
 
     /* -------------------- Header -------------------- */
-    --header-background: rgba(0, 0, 0, 0.7);
+    --header-background: rgba(38, 38, 38, 0.8);
     --header-text-color: #f1f1f1;
 
     --header-active-text-color: dodgerblue;
     --header-active-text-color-hover: #56c8ff;
     --header-active-border-color: var(--header-active-text-color);
+
+    --header-navbar-border: 1px solid dimgray;
 
 
     /* -------------------- Footer -------------------- */
