@@ -3,7 +3,8 @@
     --font-family: Fredoka, Nunito, serif;
     --border-radius: 10px;
 
-    --document-background-color: white;
+    /*--document-background-color: #fbfcfe;*/
+    --document-background-color:linear-gradient(rgba(245, 245, 245, 1), rgba(245, 245, 245, 1));
 
 
     /* -------------------- Button -------------------- */
@@ -70,7 +71,8 @@
 
     /* -------------------- CardProject -------------------- */
     --card-project-background: white;
-    --card-project-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+    --card-project-box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.1);
+    /*--card-project-box-shadow: 0px 4px 24px 0px rgba(79, 114, 205, 0.15);*/
     --card-project-background-gradient: linear-gradient(
             45deg,
             rgba(64, 156, 255, 0.3),
